@@ -1,0 +1,141 @@
+{
+  "purpose": "diagnostics that hydrolex_bench.py does not record; the benchmark itself is unmodified",
+  "environment": {
+    "python": "3.13.5",
+    "python_implementation": "CPython",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "machine": "AMD64",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "lp_solver": "scipy.optimize.linprog, method='highs'",
+    "random_seed": null,
+    "notes": "MATPOWER and pandapower are not imported; they are cited only as the distribution source of the case33bw data table."
+  },
+  "froude": {
+    "quantity_only_plan": {
+      "nodes": 281,
+      "F_max": 0.304879,
+      "at_chainage_m": 4975.0,
+      "at_depth_m": 1.080806,
+      "at_discharge_m3s": 7.42425,
+      "F_at_offtake_sections_only": 0.305853
+    },
+    "certified_plan": {
+      "nodes": 281,
+      "F_max": 0.301114,
+      "at_chainage_m": 975.0,
+      "at_depth_m": 1.303337,
+      "at_discharge_m3s": 10.0,
+      "F_at_offtake_sections_only": 0.301799
+    },
+    "largest_executable_uniform_plan": {
+      "nodes": 281,
+      "F_max": 0.28625,
+      "at_chainage_m": 2975.0,
+      "at_depth_m": 1.146398,
+      "at_discharge_m3s": 7.68127,
+      "F_at_offtake_sections_only": 0.286844
+    },
+    "figure2_uniform_ray_scan": {
+      "grid": "t in [0.02, 1.0], 197 points",
+      "F_max": 0.325687
+    },
+    "max_over_reported_plans": 0.304879,
+    "subcritical_everywhere": true
+  },
+  "grid_refinement_certified_plan": [
+    {
+      "dx_m": 25.0,
+      "z_head_m": 101.35823,
+      "depths_m": [
+        1.301567,
+        1.248768,
+        1.191735,
+        1.141202,
+        1.085656,
+        1.04007,
+        1.012565
+      ],
+      "gate_capacity_m3s": [
+        0.848825,
+        0.831429,
+        0.812222,
+        0.794815,
+        0.77523,
+        0.75878,
+        0.74868
+      ],
+      "max_depth_change_vs_25m_m": 0.0
+    },
+    {
+      "dx_m": 12.5,
+      "z_head_m": 101.35823,
+      "depths_m": [
+        1.301567,
+        1.248768,
+        1.191735,
+        1.141202,
+        1.085656,
+        1.04007,
+        1.012565
+      ],
+      "gate_capacity_m3s": [
+        0.848825,
+        0.831429,
+        0.812222,
+        0.794815,
+        0.77523,
+        0.75878,
+        0.74868
+      ],
+      "max_depth_change_vs_25m_m": 0.0
+    },
+    {
+      "dx_m": 6.25,
+      "z_head_m": 101.35823,
+      "depths_m": [
+        1.301567,
+        1.248768,
+        1.191735,
+        1.141202,
+        1.085656,
+        1.04007,
+        1.012565
+      ],
+      "gate_capacity_m3s": [
+        0.848825,
+        0.831429,
+        0.812222,
+        0.794815,
+        0.77523,
+        0.75878,
+        0.74868
+      ],
+      "max_depth_change_vs_25m_m": 0.0
+    },
+    {
+      "dx_m": 3.125,
+      "z_head_m": 101.35823,
+      "depths_m": [
+        1.301567,
+        1.248768,
+        1.191735,
+        1.141202,
+        1.085656,
+        1.04007,
+        1.012565
+      ],
+      "gate_capacity_m3s": [
+        0.848825,
+        0.831429,
+        0.812222,
+        0.794815,
+        0.77523,
+        0.75878,
+        0.74868
+      ],
+      "max_depth_change_vs_25m_m": 0.0
+    }
+  ]
+}

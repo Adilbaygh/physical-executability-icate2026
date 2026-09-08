@@ -1,0 +1,63 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+SPDX-License-Identifier: CC-BY-4.0
+
+Copyright (c) 2026 Adilbay Kudaybergenov, Mukhabbad Kazimbetova,
+Gulsara Ametova, Jadira Ispanova, Bayram Absametov, Mukhammed Qudaynazarov
+
+Everything in this repository — the source code in `src/`, the result files and
+figures in `results/`, and the documentation — is licensed under the Creative
+Commons Attribution 4.0 International License.
+
+You are free to share and adapt the material for any purpose, including
+commercially, provided you give appropriate credit, link to the license, and
+indicate if changes were made.
+
+The full legal code of the license is at
+
+    https://creativecommons.org/licenses/by/4.0/legalcode
+
+and the human-readable summary at
+
+    https://creativecommons.org/licenses/by/4.0/
+
+The license is granted by reference: the text at the URL above governs, and no
+wording in this file narrows or extends it.
+
+
+ATTRIBUTION
+-----------
+
+When you reuse this material, the following attribution satisfies the license:
+
+    A. Kudaybergenov, M. Kazimbetova, G. Ametova, J. Ispanova, B. Absametov
+    and M. Qudaynazarov, "Reproducibility package for: The Price of Physical
+    Executability in Fair Resource Allocation on Radial Supply Networks",
+    version 1.0.0, 2026. https://doi.org/10.5281/zenodo.XXXXXXX
+    Licensed under CC BY 4.0.
+
+If you modify the benchmark, please say so, and do not describe the modified
+results as the results of the accompanying paper.
+
+
+THIRD-PARTY MATERIAL
+--------------------
+
+Two inputs originate outside this repository and carry their own terms:
+
+* The IEEE 33-bus line and load table (`case33bw`) is the benchmark of
+  M. E. Baran and F. F. Wu, IEEE Trans. Power Delivery 4, 1401 (1989),
+  doi:10.1109/61.25627, as distributed with MATPOWER and pandapower. It is
+  cited as a data source; neither package is a dependency of this code.
+
+* The canal section geometry, Manning roughness and gate discharge coefficient
+  follow the published Canale Emiliano Romagnolo values of G. Luppi et al.,
+  Water 10, 1017 (2018), doi:10.3390/w10081017, which is licensed CC BY 3.0.
+  The remaining canal parameters are declared design assumptions of this work.
+
+
+NO WARRANTY
+-----------
+
+To the extent permitted by law, the material is offered as-is and as-available,
+and the licensors make no representations or warranties of any kind concerning
+it. See Section 5 of the legal code.

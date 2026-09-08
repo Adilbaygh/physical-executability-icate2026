@@ -1,0 +1,5 @@
+# Minimum versions. The exact versions of the reference run are recorded by
+# src/diagnostics.py in results/diagnostics.json (block "environment").
+numpy>=1.24
+scipy>=1.9          # linprog(method="highs")
+matplotlib>=3.7     # figures only; the numerical results do not need it

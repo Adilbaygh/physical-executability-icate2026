@@ -1,0 +1,61 @@
+{
+  "title": "Reproducibility package for \"The Price of Physical Executability in Fair Resource Allocation on Radial Supply Networks\" (ICATE 2026)",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "language": "eng",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "description": "<p>Deterministic benchmark accompanying the ICATE 2026 conference paper <em>The Price of Physical Executability in Fair Resource Allocation on Radial Supply Networks</em> (AIP Conference Proceedings).</p><p>The package contains the single script that produces every number, table entry and figure of the paper, its reference output, the three published figures, a complete list of the numerical parameters of the algorithms, and a map from each published number to its source in the result file.</p><p>Two physically unrelated radial media are solved: the IEEE 33-bus distribution feeder under a 0.95 p.u. bus-voltage floor, and a seven-offtake prismatic irrigation reach under gradually-varied-flow command head. For each medium a quantity-only leximin allocation is compared with a plan certified against the exact nonlinear network model, and the relative loss of the egalitarian floor is reported.</p><p>The script is deterministic and contains no randomness. The feeder instance uses a self-contained backward–forward sweep; MATPOWER and pandapower are cited only as the distribution source of the case33bw data table and are not runtime dependencies. The canal instance is a controlled synthetic benchmark informed by published Canale Emiliano Romagnolo parameters, not a calibrated model of that canal.</p>",
+  "creators": [
+    {
+      "name": "Kudaybergenov, Adilbay",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    },
+    {
+      "name": "Kazimbetova, Mukhabbad",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    },
+    {
+      "name": "Ametova, Gulsara",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    },
+    {
+      "name": "Ispanova, Jadira",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    },
+    {
+      "name": "Absametov, Bayram",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    },
+    {
+      "name": "Qudaynazarov, Mukhammed",
+      "affiliation": "Karakalpak State University named after Berdakh, Nukus, Uzbekistan"
+    }
+  ],
+  "keywords": [
+    "leximin allocation",
+    "max-min fairness",
+    "radial network",
+    "load curtailment",
+    "gradually varied flow",
+    "IEEE 33-bus feeder",
+    "irrigation canal",
+    "certification",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "references",
+      "identifier": "10.1109/61.25627",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "relation": "references",
+      "identifier": "10.3390/w10081017",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "The IEEE 33-bus line and load table is the case33bw benchmark of Baran and Wu (1989), doi:10.1109/61.25627. The canal section parameters follow Luppi et al., Water 10, 1017 (2018), doi:10.3390/w10081017 (CC BY 3.0); the bed slope, gate dimensions, offtake spacing, continuation flow, head-gate level limit and demand vector are declared design assumptions."
+}

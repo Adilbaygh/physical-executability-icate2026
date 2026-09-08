@@ -1,0 +1,292 @@
+{
+  "purpose": "sensitivity of the price of physical executability to the quantity-only baseline and to the deficit level",
+  "grids": "full",
+  "baseline_sensitivity_E": {
+    "certified_floor": 0.594681,
+    "note": "the certified floor is a property of the medium and does not depend on the quantity-only surrogate",
+    "paper_convention": "eta0 calibrated at full demand, calibration_load_ratio = 1.0",
+    "sweep": [
+      {
+        "calibration_load_ratio": 0.1,
+        "eta0": 0.995216,
+        "B0_kW": 3184.691,
+        "r0": 0.857252,
+        "price_percent": 30.629
+      },
+      {
+        "calibration_load_ratio": 0.15,
+        "eta0": 0.992796,
+        "B0_kW": 3176.946,
+        "r0": 0.855167,
+        "price_percent": 30.46
+      },
+      {
+        "calibration_load_ratio": 0.2,
+        "eta0": 0.990356,
+        "B0_kW": 3169.139,
+        "r0": 0.853066,
+        "price_percent": 30.289
+      },
+      {
+        "calibration_load_ratio": 0.25,
+        "eta0": 0.987897,
+        "B0_kW": 3161.269,
+        "r0": 0.850947,
+        "price_percent": 30.115
+      },
+      {
+        "calibration_load_ratio": 0.3,
+        "eta0": 0.985417,
+        "B0_kW": 3153.334,
+        "r0": 0.848811,
+        "price_percent": 29.94
+      },
+      {
+        "calibration_load_ratio": 0.35,
+        "eta0": 0.982916,
+        "B0_kW": 3145.332,
+        "r0": 0.846657,
+        "price_percent": 29.761
+      },
+      {
+        "calibration_load_ratio": 0.4,
+        "eta0": 0.980395,
+        "B0_kW": 3137.263,
+        "r0": 0.844485,
+        "price_percent": 29.581
+      },
+      {
+        "calibration_load_ratio": 0.45,
+        "eta0": 0.977851,
+        "B0_kW": 3129.124,
+        "r0": 0.842294,
+        "price_percent": 29.398
+      },
+      {
+        "calibration_load_ratio": 0.5,
+        "eta0": 0.975285,
+        "B0_kW": 3120.913,
+        "r0": 0.840084,
+        "price_percent": 29.212
+      },
+      {
+        "calibration_load_ratio": 0.55,
+        "eta0": 0.972697,
+        "B0_kW": 3112.63,
+        "r0": 0.837855,
+        "price_percent": 29.023
+      },
+      {
+        "calibration_load_ratio": 0.6,
+        "eta0": 0.970085,
+        "B0_kW": 3104.271,
+        "r0": 0.835605,
+        "price_percent": 28.832
+      },
+      {
+        "calibration_load_ratio": 0.65,
+        "eta0": 0.967449,
+        "B0_kW": 3095.835,
+        "r0": 0.833334,
+        "price_percent": 28.638
+      },
+      {
+        "calibration_load_ratio": 0.7,
+        "eta0": 0.964788,
+        "B0_kW": 3087.321,
+        "r0": 0.831042,
+        "price_percent": 28.442
+      },
+      {
+        "calibration_load_ratio": 0.75,
+        "eta0": 0.962102,
+        "B0_kW": 3078.725,
+        "r0": 0.828728,
+        "price_percent": 28.242
+      },
+      {
+        "calibration_load_ratio": 0.8,
+        "eta0": 0.95939,
+        "B0_kW": 3070.047,
+        "r0": 0.826392,
+        "price_percent": 28.039
+      },
+      {
+        "calibration_load_ratio": 0.85,
+        "eta0": 0.956651,
+        "B0_kW": 3061.282,
+        "r0": 0.824033,
+        "price_percent": 27.833
+      },
+      {
+        "calibration_load_ratio": 0.9,
+        "eta0": 0.953884,
+        "B0_kW": 3052.43,
+        "r0": 0.82165,
+        "price_percent": 27.624
+      },
+      {
+        "calibration_load_ratio": 0.95,
+        "eta0": 0.95109,
+        "B0_kW": 3043.487,
+        "r0": 0.819243,
+        "price_percent": 27.411
+      },
+      {
+        "calibration_load_ratio": 1.0,
+        "eta0": 0.948266,
+        "B0_kW": 3034.451,
+        "r0": 0.816811,
+        "price_percent": 27.195
+      }
+    ],
+    "lossless_surrogate": {
+      "eta0": 1.0,
+      "B0_kW": 3200.0,
+      "r0": 0.861373,
+      "price_percent": 30.961
+    },
+    "affine_loss_surrogate": {
+      "loss_kW": "-47.5966 + 0.059483 * delivered_kW",
+      "B0_kW": 3065.265,
+      "r0": 0.825105,
+      "price_percent": 27.927
+    },
+    "price_range_percent": [
+      27.195,
+      30.961
+    ]
+  },
+  "deficit_sensitivity_E": {
+    "eta0_fixed_at_full_demand": 0.948266,
+    "note": "a price at or below zero means the quantity-only budget is itself tighter than the physically executable floor, so the decoupled plan happens to be executable. In instance E this occurs at low source caps because eta0 is calibrated at full demand and therefore understates the efficiency at light load; the surrogate is then conservative rather than unsafe. The certified floor stops moving once the voltage limit rather than the source cap becomes the binding constraint.",
+    "sweep": [
+      {
+        "S_bar_kW": 1800.0,
+        "r0": 0.459456,
+        "certified_floor": 0.473215,
+        "price_percent": -2.995
+      },
+      {
+        "S_bar_kW": 2000.0,
+        "r0": 0.510507,
+        "certified_floor": 0.524375,
+        "price_percent": -2.717
+      },
+      {
+        "S_bar_kW": 2200.0,
+        "r0": 0.561557,
+        "certified_floor": 0.575246,
+        "price_percent": -2.438
+      },
+      {
+        "S_bar_kW": 2400.0,
+        "r0": 0.612608,
+        "certified_floor": 0.594681,
+        "price_percent": 2.926
+      },
+      {
+        "S_bar_kW": 2600.0,
+        "r0": 0.663659,
+        "certified_floor": 0.594681,
+        "price_percent": 10.394
+      },
+      {
+        "S_bar_kW": 2800.0,
+        "r0": 0.714709,
+        "certified_floor": 0.594681,
+        "price_percent": 16.794
+      },
+      {
+        "S_bar_kW": 3000.0,
+        "r0": 0.76576,
+        "certified_floor": 0.594681,
+        "price_percent": 22.341
+      },
+      {
+        "S_bar_kW": 3200.0,
+        "r0": 0.816811,
+        "certified_floor": 0.594681,
+        "price_percent": 27.195
+      },
+      {
+        "S_bar_kW": 3400.0,
+        "r0": 0.867861,
+        "certified_floor": 0.594681,
+        "price_percent": 31.477
+      },
+      {
+        "S_bar_kW": 3600.0,
+        "r0": 0.918912,
+        "certified_floor": 0.594681,
+        "price_percent": 35.284
+      },
+      {
+        "S_bar_kW": 3800.0,
+        "r0": 0.969963,
+        "certified_floor": 0.594681,
+        "price_percent": 38.69
+      }
+    ]
+  },
+  "deficit_sensitivity_C": {
+    "budget_note": "B0 = Q_max - Q_tail exactly; the canal baseline admits no calibration freedom",
+    "sweep": [
+      {
+        "Q_max_m3s": 7.5,
+        "r0": 0.378788,
+        "certified_floor": 0.378788,
+        "price_percent": 0.0
+      },
+      {
+        "Q_max_m3s": 8.0,
+        "r0": 0.454545,
+        "certified_floor": 0.454545,
+        "price_percent": 0.0
+      },
+      {
+        "Q_max_m3s": 8.5,
+        "r0": 0.530303,
+        "certified_floor": 0.530303,
+        "price_percent": 0.0
+      },
+      {
+        "Q_max_m3s": 9.0,
+        "r0": 0.606061,
+        "certified_floor": 0.552218,
+        "price_percent": 8.884
+      },
+      {
+        "Q_max_m3s": 9.5,
+        "r0": 0.681818,
+        "certified_floor": 0.553736,
+        "price_percent": 18.785
+      },
+      {
+        "Q_max_m3s": 10.0,
+        "r0": 0.757576,
+        "certified_floor": 0.553736,
+        "price_percent": 26.907
+      },
+      {
+        "Q_max_m3s": 10.5,
+        "r0": 0.833333,
+        "certified_floor": 0.553736,
+        "price_percent": 33.552
+      },
+      {
+        "Q_max_m3s": 11.0,
+        "r0": 0.909091,
+        "certified_floor": 0.553736,
+        "price_percent": 39.089
+      },
+      {
+        "Q_max_m3s": 11.5,
+        "r0": 0.984848,
+        "certified_floor": 0.553736,
+        "price_percent": 43.774
+      }
+    ]
+  },
+  "figure": "fig4_sensitivity.png"
+}
