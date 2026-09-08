@@ -1,0 +1,22 @@
+# Line endings are part of the reproducibility claim.
+#
+# README.md states that src/hydrolex_bench.py is byte-identical to the script
+# that produced the published results. Without the rules below, Git's default
+# behaviour on Windows (core.autocrlf=true) checks that file out with CRLF, so
+# a clone on Windows and a clone on Linux would differ byte for byte and any
+# checksum of the frozen script would depend on the operating system.
+#
+# Forcing LF in the working copy keeps the script, the JSON result files and
+# the documentation identical on every platform. Python, NumPy and SciPy read
+# LF files correctly on Windows, so nothing here affects how the benchmark runs.
+
+* text=auto eol=lf
+
+*.py    text eol=lf
+*.json  text eol=lf
+*.md    text eol=lf
+*.cff   text eol=lf
+*.txt   text eol=lf
+LICENSE text eol=lf
+
+*.png   binary
