@@ -10,6 +10,8 @@ version: 1.0.0
 date-released: "2026-09-08"
 license: CC-BY-4.0
 repository-code: "https://github.com/Adilbaygh/physical-executability-icate2026"
+doi: "10.5281/zenodo.22665536"
+commit: "59c2423af8"
 abstract: >-
   Deterministic benchmark that computes the price of physical executability for
   leximin resource allocation on two unrelated radial supply media: the IEEE

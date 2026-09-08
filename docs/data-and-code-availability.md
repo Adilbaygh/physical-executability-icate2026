@@ -10,9 +10,9 @@ AIP template style *Heading 1* (it renders in all capitals automatically) and
 
 > The complete benchmark that produces every number, table entry and figure in
 > this paper is openly available at
-> https://doi.org/10.5281/zenodo.XXXXXXX (version 1.0.0), and is developed at
+> https://doi.org/10.5281/zenodo.22665536 (version 1.0.0), and is developed at
 > https://github.com/Adilbaygh/physical-executability-icate2026
-> (commit REPLACE-WITH-COMMIT-HASH). The package contains one deterministic
+> (commit 59c2423af8). The package contains one deterministic
 > Python script with no random component, its reference output, the three
 > figures, a table of every numerical parameter of the algorithms, and a map
 > from each published number to its source in the output file. The feeder
@@ -23,18 +23,24 @@ AIP template style *Heading 1* (it renders in all capitals automatically) and
 
 ---
 
-## What to fill in
+## Which DOI this is, and why
 
-| Placeholder | Where it comes from |
-|---|---|
-| `10.5281/zenodo.XXXXXXX` | the **concept DOI** reserved in Zenodo (resolves to the newest version) |
-| `REPLACE-WITH-COMMIT-HASH` | the first 7–10 characters of the tagged commit |
+The statement above is complete: nothing is left to fill in.
 
-The GitHub account is already filled in as `Adilbaygh`.
+`10.5281/zenodo.22665536` is the **version DOI** of release v1.0.0, minted by
+Zenodo from the GitHub release of commit `59c2423af8`. It is used here in
+preference to a concept DOI, deliberately.
 
-Use the **concept** DOI in the paper, not the per-version DOI, so the citation
-keeps resolving if the package is updated after publication. State the version
-number separately, as above.
+A concept DOI always resolves to the newest version, which is the right choice
+when a reader wants the current state of a piece of software. It is the wrong
+choice for the statement above, because the paper's claim is that *this* code
+produces *these* numbers. A reader who follows a concept DOI after a later
+release would receive a version that may not reproduce the published table. The
+version DOI pins the archived state that the reported figures came from, and the
+version number is stated alongside it so there is no ambiguity.
+
+If a future version is published, add its own version DOI to the revised paper
+rather than replacing this one.
 
 ## Related statements the conference may also require
 
