@@ -46,14 +46,12 @@
   "related_identifiers": [
     {
       "relation": "references",
-      "identifier": "10.1109/61.25627",
-      "scheme": "doi",
+      "identifier": "https://doi.org/10.1109/61.25627",
       "resource_type": "publication-article"
     },
     {
       "relation": "references",
-      "identifier": "10.3390/w10081017",
-      "scheme": "doi",
+      "identifier": "https://doi.org/10.3390/w10081017",
       "resource_type": "publication-article"
     }
   ],
