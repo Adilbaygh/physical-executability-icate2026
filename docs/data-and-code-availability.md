@@ -10,9 +10,9 @@ AIP template style *Heading 1* (it renders in all capitals automatically) and
 
 > The complete benchmark that produces every number, table entry and figure in
 > this paper is openly available at
-> https://doi.org/10.5281/zenodo.22665536 (version 1.0.0), and is developed at
+> https://doi.org/10.5281/zenodo.22706044 (version 1.1.0), and is developed at
 > https://github.com/Adilbaygh/physical-executability-icate2026
-> (commit 59c2423af8). The package contains one deterministic
+> (commit 53d17bd2d4). The package contains one deterministic
 > Python script with no random component, its reference output, the three
 > figures, a table of every numerical parameter of the algorithms, and a map
 > from each published number to its source in the output file. The feeder
@@ -27,8 +27,8 @@ AIP template style *Heading 1* (it renders in all capitals automatically) and
 
 The statement above is complete: nothing is left to fill in.
 
-`10.5281/zenodo.22665536` is the **version DOI** of release v1.0.0, minted by
-Zenodo from the GitHub release of commit `59c2423af8`. It is used here in
+`10.5281/zenodo.22706044` is the **version DOI** of release v1.1.0, minted by
+Zenodo from the GitHub release of commit `53d17bd2d4`. It is used here in
 preference to a concept DOI, deliberately.
 
 A concept DOI always resolves to the newest version, which is the right choice
@@ -54,7 +54,7 @@ rather than replacing this one.
 1. Create the GitHub repository and push this package.
 2. In Zenodo, **reserve a DOI** for the deposition before publishing it.
 3. Put the reserved concept DOI into the manuscript.
-4. Tag the repository (`v1.0.0`), let Zenodo capture the release, publish.
+4. Tag the repository, let Zenodo capture the release, publish.
 5. Copy the resulting commit hash into the statement above.
 
 ## After the paper itself receives a DOI
