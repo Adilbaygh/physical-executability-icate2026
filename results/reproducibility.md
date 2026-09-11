@@ -84,3 +84,12 @@ The script prints the environment block first, so the comparison above can be
 extended by anyone who runs it. Nothing in the benchmark is seeded, sampled or
 timed, so any difference between two runs would indicate a genuine numerical
 discrepancy rather than nondeterminism.
+
+## Figure labels, version 1.1.0
+
+Figures 2 and 3 were redrawn by `src/figures.py` from the values already stored
+in `results/hydrolex_bench_results.json`. The benchmark was not re-run and no
+plotted value changed; only the labels did, so that the figures use the symbol
+the manuscript defines for a floor attained by a certified plan rather than the
+symbol it reserves for the unknown optimum. `src/hydrolex_bench.py` remains
+byte-identical to the script that produced the archived output.

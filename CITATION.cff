@@ -6,8 +6,8 @@ message: >-
   If you use this software, please cite both the software and the conference
   paper it accompanies.
 type: software
-version: 1.0.0
-date-released: "2026-09-08"
+version: 1.1.0
+date-released: "2026-09-11"
 license: CC-BY-4.0
 repository-code: "https://github.com/Adilbaygh/physical-executability-icate2026"
 doi: "10.5281/zenodo.22665536"

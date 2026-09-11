@@ -26,7 +26,7 @@ physically unrelated radial media:
 | Transported quantity | active power, kW | discharge, m³/s |
 | Potential | bus voltage magnitude, p.u. | flow depth at the offtake, m |
 | Exact network solve | backward–forward sweep | RK4 integration of the gradually-varied-flow equation |
-| Feasible set downward closed | yes (under the monotonicity argument of the paper) | no (numerical counterexample) |
+| Feasible set downward closed | not certified — no proof or applicable theorem was found | no (numerical counterexample) |
 
 The two solves are (i) on a **quantity-only** feasible set, in which the network
 is compressed into one scalar budget, and (ii) on a **certified** feasible set,
@@ -42,6 +42,7 @@ egalitarian floor between the two.
 src/hydrolex_bench.py            the benchmark — one deterministic script
 src/diagnostics.py               non-invasive diagnostics (environment, Froude profile, grid check)
 src/sensitivity.py               sensitivity of the price to the baseline and to the deficit level
+src/figures.py                   redraws Figures 2 and 3 from the archived output (labels only)
 results/hydrolex_bench_results.json   reference output of the benchmark
 results/diagnostics.json              output of the diagnostics script
 results/sensitivity.json              output of the sensitivity script
@@ -59,7 +60,17 @@ CITATION.cff, LICENSE, .zenodo.json
 
 `src/hydrolex_bench.py` is **frozen**: it is byte-identical to the script that
 produced the published results. `src/diagnostics.py` imports it as a module and
-never modifies it.
+never modifies it. `src/figures.py` does not import it at all: it reads
+`results/hydrolex_bench_results.json` and redraws two figures from the values
+already stored there.
+
+Figures 2 and 3 were relabelled in version 1.1.0. The manuscript reserves `r*`
+for the leximin floor of problem P1 — the true optimum, which is not computed —
+and writes the value a certified plan attains as `r_cert`; the original figures
+carried the old symbol, so they labelled a certified lower bound with the symbol
+reserved for the optimum. Figure 3 also described the search interval of the
+sequential-linearization procedure as a "bracket", which reads as a proved bound
+and is not one. No plotted value changed.
 
 ---
 
@@ -75,6 +86,7 @@ cd src
 python hydrolex_bench.py        # writes hydrolex_bench_results.json and fig1..fig3.png
 python diagnostics.py           # writes ../results/diagnostics.json
 python sensitivity.py           # writes ../results/sensitivity.json and fig4
+python figures.py               # redraws fig2 and fig3 from the archived JSON
 ```
 
 `sensitivity.py --quick` runs the same study on reduced grids for a fast check.
@@ -129,13 +141,21 @@ asserted feasible before it is printed.
 
 ### Scope of the claims
 
-Instance E is reported under a monotonicity argument for the radial
-constant-power load-flow model; instance C is not downward closed and its floor
-is obtained by a sequential-linearization heuristic with **exact feasibility
-certification but no global optimality certificate**. A certified plan proves
-that the true egalitarian floor is *at least* the reported value, hence the
-reported price is an **upper bound** on the true price. Readers should treat the
-canal price accordingly.
+Neither reported price is exact, and both are upper bounds, for the same
+reason: a plan the exact model certifies proves that the true egalitarian floor
+is *at least* the value that plan attains, and proves nothing about the other
+direction.
+
+For instance C the feasible set is not downward closed and the floor comes from
+a sequential-linearization heuristic with **exact feasibility certification but
+no global optimality certificate**. For instance E downward closure is **not
+certified**: it would follow from two monotonicity conditions — that for
+`0 ≤ y ≤ x` the head power satisfies `S(y) ≤ S(x)` and every bus voltage
+satisfies `V_j(y) ≥ V_j(x)` on the solution branch the sweep converges to — and
+no proof of those for the exact sweep equations, nor an applicable cited
+theorem, was found. Equation (6) therefore returns the largest **uniform** plan
+the medium executes, which is a lower bound on the leximin floor and not
+necessarily equal to it.
 
 ---
 
